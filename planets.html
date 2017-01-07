@@ -44,18 +44,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 
 .planet:hover {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
 }
 
 #planet1 {
-  /*background-image: url("DSCN7418-2.jpg"); */
-  background-color: slateBlue;
+  background-image: url("5angel.jpg"); 
+  background-size: cover;
+  /* background-color: slateBlue; */
 }
 #planet2 {
   /* background-image: url("DSCN7418-2.jpg"); */
@@ -73,19 +74,28 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid #FFF;
-  background-image: url("DSCN7418-2.jpg"); 
+  background-image: url("Me.PNG"); 
   width: 160px;
   height: 160px;
+}
+
+p {
+  font-family: 'Amatic SC';
+  color: #FFF;
+  font-size: 50;
+  margin-left: 15px;
 }
 
 </style>
 
 <head>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 
 <body>
 
-<div  id = "container">  
+<div  id = "container">
+  <p>Welcome <br />  to Alex's  <br />  World</p>  
   <div class = "circle" id = "orbit3"> 
     <div class="planet" id="planet3"> </div> 
   </div>
@@ -113,9 +123,9 @@ function start1(thumbid, speed) {
     }
   }
 
-start1("planet1", 15);
-start1("planet2", 15);
-start1("planet3", 15);
+start1("planet1", 17);
+start1("planet2", 17);
+start1("planet3", 17);
 </script>
 
 </body>
