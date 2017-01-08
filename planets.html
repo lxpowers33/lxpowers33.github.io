@@ -6,6 +6,7 @@ body {
 }
 
 #container {
+  top: 0;
   height: 800px;
   position: relative;
   /*background: #242442; */
@@ -16,16 +17,18 @@ body {
 
 .circle {
   position: absolute;
-  border: 1px solid #FFF;
+  border: 1px solid GoldenRod;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: rgba(255, 250, 250, 0.03);
 }
 
 #orbit1 {
   width: 400px;
   height: 400px;
+  
 }
 
 #orbit2 {
@@ -34,8 +37,8 @@ body {
 }
 
 #orbit3 {
-  width: 800px;
-  height: 800px;
+  width: 850px;
+  height: 850px;
 }
 
 .planet {
@@ -88,16 +91,59 @@ p {
   margin-left: 15px;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: right;
+}
+
+li a {
+  font-family: 'Raleway', sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: hsl(210, 29%, 21%);
+}
+#logo {
+  font-family: 'Amatic SC';
+  font-size: 30;
+  display: block;
+  float: left;
+  color: white;
+  padding: 4px 35px;
+}
+
+
 </style>
 
 <head>
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
 </head>
 
 <body>
+<ul>
+    <li id="logo">Alex Powers</li>
+    <li><a href="contact.html">Blog</a></li>
+    <li><a href="index.html">Art</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="planets.html">Home</a></li>
+
+</ul>
 
 <div  id = "container">
-  <p>Welcome <br />  to Alex's  <br />  World</p>  
+  <!--<p>Welcome <br />  to Alex's  <br />  World</p> -->
   <div class = "circle" id = "orbit3"> 
     <div class="planet" id="planet3"> </div> 
   </div>
