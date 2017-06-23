@@ -70,6 +70,26 @@ _planets.push({
 		speedy: 0,
 		id:_counter++});
 
+for(i=0; i<30; i++) {
+	var rnd = Math.random();
+	_planets.push({
+		type:"small planet",
+		x:0,
+		y:0,
+		z:0,
+		parent:_planets[0],
+		scale:1,
+		radius:0.2+(1-rnd)*7,
+		color:"#ffffff",
+		distance:40,
+		rotationx:Math.PI*2*Math.random(),
+		rotationy:Math.random()*0.4,
+		speedx:0.2 + 0.2-0.2*rnd,
+		speedy: 0,
+		id:_counter++});
+}
+
+
 for(i=0; i<300; i++) {
 	var rnd = Math.random();
 	_planets.push({
