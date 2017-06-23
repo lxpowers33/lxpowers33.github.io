@@ -50,16 +50,36 @@ _planets.push({
 	rotationy:0,
 	id:_counter++});
 
+
+	_planets.push({
+		type:"small planet", x:0, y:0, z:0, parent:_planets[0], scale:1, rotationx:Math.PI*2*Math.random(),rotationy:0,
+		color:"#199FAF",distance:200, radius:20, speedx:0.25,
+		speedy: 0,
+		id:_counter++});
+
+
+	_planets.push({
+		type:"small planet", x:0, y:0, z:0, parent:_planets[0], scale:1, rotationx:Math.PI*2*Math.random(),rotationy:0,
+		color:"#880D85",distance:400, radius:40, speedx:0.15,
+		speedy: 0,
+		id:_counter++});
+
+	_planets.push({
+		type:"small planet", x:0, y:0, z:0, parent:_planets[2], scale:1, rotationx:Math.PI*2*Math.random(),rotationy:0,
+		color:"#ffffff",distance:30, radius:10, speedx:0.5,
+		speedy: 0,
+		id:_counter++});
+
 for(i=0; i<300; i++) {
 	var rnd = Math.random();
 	_planets.push({
-		type:"small asteroid",
+		type:"small planet",
 		x:0,
 		y:0,
 		z:0,
 		parent:_planets[0],
 		scale:1,
-		radius:0.5+(1-rnd)*2,
+		radius:0.5+(1-rnd)*1.5,
 		color:"#ffffff",
 		distance:40+800*rnd,
 		rotationx:Math.PI*2*Math.random(),
