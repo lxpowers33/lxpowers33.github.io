@@ -31,7 +31,7 @@ body {
 }
 
 #logo {
-  font-family: "Amatic SC";
+  font-family: "Amatic SC", "Open Sans", sans-serif;
   font-size: 20pt;
   display: block;
   float: left;

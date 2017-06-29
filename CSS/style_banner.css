@@ -18,5 +18,7 @@
 	text-align: right;
 	padding: 180px 11.1111111% 0% 11.1111111%;
 	margin: 0px 0px;
+	z-index: 1;
+	position:relative
 }
 

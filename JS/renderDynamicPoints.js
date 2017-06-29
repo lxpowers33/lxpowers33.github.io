@@ -110,8 +110,8 @@ function drawObject(v) {
 	ctx.arc(v.x,v.y,2,0,2*Math.PI);
 	ctx.closePath();
 	ctx.fill();
-	ctx.strokeStyle = "#ffffff";
- 	ctx.lineWidth = 0.2;
+	ctx.strokeStyle = "#7E7E7E";
+ 	ctx.lineWidth = 0.3;
 
 	for (t=0; t<_dots.length; t++) {
 		if (v.make > v.cutoff + 0.5) {
