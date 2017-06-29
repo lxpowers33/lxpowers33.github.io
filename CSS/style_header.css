@@ -1,0 +1,40 @@
+
+/*"Open Sans"*/
+body {
+  margin: 0px;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #151515;
+}
+
+.nav li {
+    float: right;
+}
+
+.nav li a {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav li a:hover {
+    background-color: hsl(210, 29%, 21%);
+}
+
+#logo {
+  font-family: "Amatic SC";
+  font-size: 20pt;
+  display: block;
+  float: left;
+  color: white;
+  padding: 7px 35px;
+}
