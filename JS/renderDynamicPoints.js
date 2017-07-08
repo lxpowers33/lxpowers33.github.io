@@ -20,11 +20,8 @@ function initDynamicPoints() {
 	canvas.style.zIndex="0";
 	canvas.style.width= "1000px"; //actual width
 	canvas.style.height="250px"; //actual height 
-	//canvas.width = "1000px";
-	//canvas.height = "250px";
 	ctx = canvas.getContext("2d");
 	animate();
-	//setInterval(eventOEF, 200);
 }
 
 function reSize() {
@@ -40,7 +37,7 @@ for (i=0; i<30; i++) {
 
 
 // animation settings
-const duration = 1500;
+const duration = 1700;
 const ease = d3.easeCubic;
 var timer;
 
@@ -90,8 +87,8 @@ function CalculateLayout() {
 	for (i=0; i<4; i++) {
 		select = getRandomInt(0, _dots.length-1);
 
-		_dots[select].x = 1000*Math.random()-25;
-		_dots[select].y = 300*Math.random()-25;
+		_dots[select].x = 1000*Math.random()-100;
+		_dots[select].y = 500*Math.random()-100;
 	}
 }
 

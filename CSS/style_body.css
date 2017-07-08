@@ -4,8 +4,32 @@
     color: #3b3c40;
     font-size: 14px;*/
     padding: 5.55555555% 11.1111111%;
-    font-family: "Georgia",serif;
-    font-size: 1.15em;
-    line-height: 1.55;
     color: #3b3b3b;
+    line-height: 1.55;
+    
+}
+
+.maintext {
+	font-family: "Georgia",serif;
+	font-size: 1.15em;
+}
+
+.maintitle {
+	font-family: "Raleway", sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	margin-bottom: 0em;
+	margin-top: 0em;
+	
+}
+
+#scroll {
+height:505px;
+margin:0px 0px;
+overflow:auto;
+white-space:nowrap;
+}
+
+#scroll img {
+	height: 500px; 
 }
