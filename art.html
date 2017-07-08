@@ -4,7 +4,7 @@
   <title>Alex's Art</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="CSS/style_header.css">
   <link rel="stylesheet" type="text/css" href="CSS/style_banner.css">
@@ -56,13 +56,25 @@
 <body onload="initPollock()">
 
   <!-- NAVBAR -->
-    <ul class="nav">
-      <li id="logo"> Alex Powers </li>
-      <li><a href="art.html">Art</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="planets.html">Home</a></li>
-    </ul>
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Alex Powers </a>
+      <a href="art.html">Art</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a href="planets.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("navbar");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
 
   <!-- BANNER -->
   <div class="banner" id="pollockbanner">
@@ -73,8 +85,9 @@
 
   <!-- Activate the Banner Animation -->
   <script>
-  $( "#pollockbanner" ).mousemove(function( event ) {
-    var mouse = {x:event.pageX, y:event.pageY-50};
+  $("#pollockbanner").mousemove(function( event ) {
+    var offset = $("#pollockbanner").offset();
+    var mouse = {x:event.pageX, y:event.pageY-offset.top};
     newpoint(mouse);
   });
   </script>
