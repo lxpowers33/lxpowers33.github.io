@@ -7,30 +7,46 @@
   <link rel="stylesheet" type="text/css" href="CSS/style_header.css">
   <link rel="stylesheet" type="text/css" href="CSS/style_banner.css">
   <link rel="stylesheet" type="text/css" href="CSS/style_body.css">
+  <link rel="stylesheet" type="text/css" href="CSS/researchpage.css">
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY <script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+  <script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script> 
 
   <!-- SCRIPTS and LIBRARIES -->
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script language="javascript" src="JS/renderDynamicPoints.js"></script>
-  
+  <script language="javascript" src="JS/projectgallery.js"></script>
 
 </head>
 
 <body onload="initDynamicPoints()">
 
   <!-- NAVBAR -->
-    <ul class="nav">
-      <li id="logo"> Alex Powers </li>
-      <li><a href="art.html">Art</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="planets.html">Home</a></li>
-    </ul>
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Alex Powers </a>
+      <a href="art.html">Art</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a href="planets.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("navbar");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
 
   <!-- BANNER -->
   <div class="banner">
@@ -39,15 +55,172 @@
   </div>
 
   <!-- BODY -->
-  <div>
-    <p class="mainbody"> 
-    Lorem ipsum dolor sit amet, turpis venenatis vel cras donec dignissim nam, in vitae posuere auctor, pellentesque erat auctor curabitur felis ante sit, gravida neque sapien, nibh fusce. Quis volutpat mauris ullamcorper aenean wisi vestibulum, pellentesque ut sapien. Etiam non pharetra, magna proin suspendisse. Nisl quis, vivamus mauris sollicitudin convallis rerum. Aliqua non elementum wisi. Ac odio pellentesque in volutpat, sit pellentesque.
+  <div class="mainbody">
+    <h1 class="maintext">  Research </h1>
+    <p class="maintext"> 
+    I am interested in the intersection of chemistry, biology, and computer science. My first research focus was the synthesis of semiconductor nanoparticles, working at UC Berkeley. Since then, my research has shifted to studying dynamic nanoscale systems in general and developing tools to do so from computer science and chemistry. These topics includes nanoscale self-assembly, single molecule imaging, and liquid electron microscopy. Along with these, I have become very interested in image analysis and computer vision. In the future, I am interested in translating my knowledge and skills into medical and clinical applications working at Stanford University.
     <br>
-    Pellentesque mauris suspendisse, vestibulum tristique wisi sed. Pede eget viverra. Vitae fringilla eu neque proin pellentesque magna. A elit et lobortis nascetur. Curabitur ultrices vel officia, urna sit nulla nostrud mauris nec, donec condimentum gravida blandit ligula wisi. Eget commodo, urna in, lorem consequat, volutpat ipsum arcu ultrices. Nostra convallis varius sodales phasellus faucibus, nunc gravida. Interdum risus lectus augue turpis, nec ultricies ut fugiat ultrices odio, arcu nec blandit, semper proin vulputate, eget quis risus at natoque.
+    <hr>
     <br>
-    Id congue, imperdiet lobortis velit amet pellentesque pellentesque, velit optio massa, ac a sit velit condimentum lectus ac, magnis enim facilisis mauris amet vestibulum euismod. Nisl volutpat est justo eget, porttitor risus mus, libero massa, nunc amet condimentum morbi sit ut, dolor phasellus erat. Urna ullamcorper wisi sed etiam arcu, ac est enim in gravida fames, dis nunc, duis maecenas neque amet in quam. Odio fusce. A justo. Dignissim turpis nunc metus, accumsan suscipit rutrum amet vestibulum sed diam.
     <br>
-    Lacus suspendisse. Tellus cras ipsum euismod, aliquam adipiscing quia, maecenas ullamcorper vivamus, luctus magnis, varius sed sed libero neque. Quis integer vitae, quam vitae, mauris in, sodales dolor nascetur. Ut in convallis ultrices vestibulum nulla dui, maecenas pulvinar tincidunt, eu lacus suspendisse ligula metus, amet tellus ut. Diam vitae, nullam sed ante integer elit, tincidunt conubia.
+    </p>
+
+    <h1 class="maintext">  Projects </h1>
+    <div class="row">
+        <div class="col">
+            <a class="imagelink" href="javascript:void(0)" onclick="projectshow(1)">
+                <div class="imagecontainer">
+                    <img src="Images/Research/image12.jpeg" class="backimage"></img>
+                    <span class="text-content highlight" id="image1"><span>Nanoscale<br> Systems</span></span>
+                </div>
+            </a>
+            <a class="imagelink"  href="javascript:void(0)" onclick="projectshow(2)">
+                <div class="imagecontainer">
+                    <img src="Images/Research/image35.jpeg" class="backimage"></img>
+                    <span class="text-content" id="image2"><span>Nano-Bio</span></span>
+                </div>
+            </a>
+            <a class="imagelink"  href="javascript:void(0)" onclick="projectshow(3)"> 
+                <div class="imagecontainer">
+                    <img src="Images/Research/image2.jpeg" class="backimage"></img>
+                    <span class="text-content" id="image3"><span>Image Analysis</span></span>
+                </div>
+            </a>
+            <a class="imagelink" href="javascript:void(0)" onclick="projectshow(4)"> 
+                <div class="imagecontainer">
+                    <img src="Images/Research/picturelung.jpeg" class="backimage"></img>
+                    <span class="text-content" id="image4"><span>Nanoparticle Sensors</span></span>
+                </div> 
+            </a>
+        </div>
+
+        <div class="col elastic" id="descriptioncol">
+            <div id="fade-in1" class="show">
+                <h1 class="maintext">  Dynamic Electron Microscopy </h1>
+
+                <p class="maintext">       
+                Liquid electron miscropy enables us to finally peer into a dynamic world of particles and atoms. Currently, the technique limited to metallic materials that can withstand the bombardment with electrons and produce high contrast images. However, I believe this is the first step to finally seeing detailed biological systems in action. 
+                
+                </p>
+                <img src="Images/Research/ringvideo2.gif"></img>
+                <img src="Images/Research/magneticvideo.gif"></img>
+
+                <p class="maintext">
+                We used this technique to study a variety of new phenomena. We measured piconewton forces generated by Van der Waals and magnetic dipole interactions between nanoparticles over 1-7 nm length scales. These interactions led to assembly of nanoparticles into organized chains and lattices. When templated by circular liquid droplets, we could produce nanoparticle rings 50-100nm in diameter. I also analyzed the growth and etching of crystals. In our study published in Science magazine, we demonstrated that preferential etching along surfaces with high curvature can be used to generate nanoparticles with new types of geometries, like tetrahexahedrons.  
+                </p>
+
+                <img src="Images/Research/forces.png" width=300px height=auto></img>
+            </div>
+            <div id="fade-in2">
+                <h1 class="maintext">  Protein labeling with Nanoparticles </h1>
+                <p class="maintext"> 
+                Working at the Molecular Foundry at Lawrence Berkeley National Laboratory, I designed fluorescent nanoparticles to be bright, stable probes to visualize the motion of proteins inside cells. 
+                </p>
+                <img src="Images/Research/nn7b01470_si_002.gif" width=300px height=auto></img>
+                <br>
+                <img src="Images/Research/nanobio2.png" width=300px height=auto></img>
+                <p class="maintext"> 
+                Proteins are incredibly dynamic: they move around within cells and for many, internal moving parts are critical for their function. In this project, we were interested in kinesin, a motor protein that transports vesicles along microtubules via two feet and a hand over hand motion. 
+                I optimized the nanoparticle synthesis to produce two particles of different sizes with two different colors that were small, bright, and had narrow emission linewidths. These two colors would be used to track each head of a single kinesin independently. I coated the nanoparticles in amphiphilic polymer so they would be soluble inside the cell and attached them to engineered kinesin via the SNAP-tag labeling system. The nanoparticle I developed were 3x brighter than the commercially available ones and significantly improved the imaging in vivo. 
+                </p>
+                <img src="Images/Research/nanobio1.png" width=400px height=auto></img>
+            </div>
+            <div id="fade-in3">
+                <h1 class="maintext">  Image Analysis and Segmentation </h1>
+                <img src="Images/Research/imaging3.png" width=200px height=auto></img>
+                <img src="Images/Research/outline2.gif" width=200px height=auto></img>
+                <p class="maintext"> 
+                During my microscopy work, I have developed several custom algorithms and applications for image segmentation and analysis. These are particularly suited for electron microscopy videos and for segmenting images, tracking objects, and analyzing object properties such as velocities, geometric relations, and growth processes. 
+                </p>
+                <img src="Images/Research/project1_1.png" width=80% height=auto></img>
+                <p class="maintext"> 
+                The low signal to noise ratio and fluctuations in background intensity make electron microscopy images particularly challenging for accurate image segmentation. I developed a successful method that uses laplacian of gaussian filters, that when convolved with the image, detect nanoparticle shaped blobs. By using a range of filter sizes in a scale space approach, I was able to quickly capture particles at multiple size scales, avoiding extensive preprocessing, and distinguish overlapping particles. My latest project is applying gaussian fitting from super-resolution flourescence microscopy to obtain tracking of nanoparticle motion with sub-nm accuracy. 
+                </p>    
+                
+            </div>
+            <div id="fade-in4">
+                <h1 class="maintext">  Undestanding Stress Sensing Tetrapod Crystals </h1>
+                <img src="Images/Research/picturetripods.jpeg" width=200px height=auto></img>
+                <img src="Images/Research/tripods1.png" width=400px height=auto></img>
+                <p class="maintext"> 
+                The Alivisatos lab developed tetrapod shaped nanoparticles capable of sensing tensile stress. When embedded in a polymer matrix, stress and strain applied to the matrix could be measured via a change in fluorescence emission wavelength from the particles. 
+                I used image analysis techniques to better understand this effect, studying electron microscopy images of the embedded particles. We found that the particles tended to aggregate within the polymer, and the sensing effected depended on how tightly they were packed together. Ultimately, we were able to use this technology to measure the deformation of an artificially respired chicken lung.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h1 class="maintext">  Publications </h1>
+    <p class="maintext"> 
+      <ol class="publist"> 
+      <li>
+        <span class="pubtitle"> Quantum dot luminescent concentrator cavity exhibiting 30-fold concentration </span> <br>
+        <span class="authors"> ND Bronstein, Y Yao, L Xu, E O’Brien, AS Powers, VE Ferry, AP Alivisatos, ... <br>
+        <b> ACS Photonics </b> 2 (11), 1576-1583, 2015 </span> <a href="javascript:void(0)" onclick="showabstract(this, 1)">Show Abstract</a> <br>
+
+        <span class="abstract" id="abstract1" style="display: none"> 
+          <br>
+          Luminescent solar concentrators doped with CdSe/CdS quantum dots provide a potentially low-cost and high-performance alternative to costly high-band-gap III–V semiconductor materials to serve as a top junction in multijunction photovoltaic devices for efficient utilization of blue photons. In this study, a photonic mirror was coupled with such a luminescent waveguide to form an optical cavity where emitted luminescence was trapped omnidirectionally. By mitigating escape cone and scattering losses, 82% of luminesced photons travel the length of the waveguide, creating a concentration ratio of 30.3 for blue photons in a waveguide with a geometric gain of 61. Further, we study the photon transport inside the luminescent waveguide, showing unimpeded photon collection across the entire length of the waveguide.
+        </span>
+
+      </li>
+      <li>
+        <span class="pubtitle"> Single-particle mapping of nonequilibrium nanocrystal transformations </span> <br>
+        <span class="authors"> X Ye, MR Jones, LB Frechette, Q Chen, AS Powers, P Ercius, G Dunn, ... <br>
+        <b> Science </b> 354 (6314), 874-877, 2016 </span> <a href="javascript:void(0)" onclick="showabstract(this, 2)">Show Abstract</a> <br>
+
+          <span class="abstract" id="abstract2" style="display: none"> 
+          <br>
+          Chemists have developed mechanistic insight into numerous chemical reactions by thoroughly characterizing nonequilibrium species. Although methods to probe these processes are well established for molecules, analogous techniques for understanding intermediate structures in nanomaterials have been lacking. We monitor the shape evolution of individual anisotropic gold nanostructures as they are oxidatively etched in a graphene liquid cell with a controlled redox environment. Short-lived, nonequilibrium nanocrystals are observed, structurally analyzed, and rationalized through Monte Carlo simulations. Understanding these reaction trajectories provides important fundamental insight connecting high-energy nanocrystal morphologies to the development of kinetically stabilized surface features and demonstrates the importance of developing tools capable of probing short-lived nanoscale species at the single-particle level.
+        </span>
+      </li>
+      <li>
+        <span class="pubtitle"> Mechanisms of local stress sensing in multifunctional polymer films using fluorescent tetrapod nanocrystals </span> <br>
+        <span class="authors"> SN Raja, D Zherebetskyy, S Wu, P Ercius, A Powers, ACK Olson, DX Du, ... <br>
+        <b> Nano letters </b> 16 (8), 5060-5067, 2016 </span> <a href="javascript:void(0)" onclick="showabstract(this, 3)">Show Abstract</a> <br>
+
+          <span class="abstract" id="abstract3" style="display: none"> 
+          <br>
+          Nanoscale stress-sensing can be used across fields ranging from detection of incipient cracks in structural mechanics to monitoring forces in biological tissues. We demonstrate how tetrapod quantum dots (tQDs) embedded in block copolymers act as sensors of tensile/compressive stress. Remarkably, tQDs can detect their own composite dispersion and mechanical properties with a switch in optomechanical response when tQDs are in direct contact. Using experimental characterizations, atomistic simulations and finite-element analyses, we show that under tensile stress, densely packed tQDs exhibit a photoluminescence peak shifted to higher energies (“blue-shift”) due to volumetric compressive stress in their core; loosely packed tQDs exhibit a peak shifted to lower energies (“red-shift”) from tensile stress in the core. The stress shifts result from the tQD’s unique branched morphology in which the CdS arms act as antennas that amplify the stress in the CdSe core. Our nanocomposites exhibit excellent cyclability and scalability with no degraded properties of the host polymer. Colloidal tQDs allow sensing in many materials to potentially enable autoresponsive, smart structural nanocomposites that self-predict impending fracture.
+        </span>
+      </li>
+      <li>
+        <span class="pubtitle"> Tracking nanoparticle diffusion and interaction during self-assembly in a liquid cell </span> <br>
+        <span class="authors"> AS Powers, HG Liao, SN Raja, ND Bronstein, AP Alivisatos, H Zheng <br>
+        <b> Nano letters </b> 17 (1), 15-20, 2016 </span> <a href="javascript:void(0)" onclick="showabstract(this, 4)">Show Abstract</a> <br>
+
+          <span class="abstract" id="abstract4" style="display: none"> 
+          <br>
+          Nanoparticle self-assembly has been well studied theoretically, but it remains challenging to directly observe and quantify individual nanoparticle interactions. With our custom image analysis method, we track the trajectories of nanoparticle movement with high precision from a stack of relatively noisy images obtained using liquid cell transmission electron microscopy. In a time frame of minutes, Pt–Fe nanoparticles self-assembled into a loosely packed hcp lattice. The energetics and stability of the dynamic assembly were studied quantitatively. From velocity and diffusion measurements, we experimentally determined the magnitude of forces between single particles and the related physical properties. The results illustrate that long-range anisotropic forces drive the formation of chains, which then clump and fold to maximize close range van der Waals interactions.
+        </span>
+      </li>
+      <li>
+        <span class="pubtitle"> Covalent Protein Labeling and Improved Single Molecule Optical Properties of Aqueous CdSe/CdS Quantum Dots </span> <br>
+        <span class="authors"> SM Wichner, VR Mann, AS Powers, MA Segal, M Mir, JN Bandaria, ... <br>
+        <b> ACS nano </b>, 2017 </span> <a href="javascript:void(0)" onclick="showabstract(this, 5)">Show Abstract</a> <br>
+
+          <span class="abstract" id="abstract5" style="display: none"> 
+          <br>
+          Semiconductor quantum dots (QDs) have proven to be superior probes for single-molecule imaging compared to organic or genetically encoded fluorophores, but they are limited by difficulties in protein targeting, their larger size, and on–off blinking. Here, we report compact aqueous CdSe/CdS QDs with significantly improved bioconjugation efficiency and superior single-molecule optical properties. We have synthesized covalent protein labeling ligands (i.e., SNAP tags) that are optimized for nanoparticle use, and QDs functionalized with these ligands label SNAP-tagged proteins ∼10-fold more efficiently than existing SNAP ligands. Single-molecule analysis of these QDs shows 99% of time spent in the fluorescent on-state, ∼4-fold higher quantum efficiency than standard CdSe/ZnS QDs, and 350 million photons detected before photobleaching. Bright signals of these QDs enable us to track the stepping movement of a kinesin motor in vitro, and the improved labeling efficiency enables tracking of single kinesins in live cells.
+        </span>
+      </li>
+      <li>
+        <span class="pubtitle"> Characterizing Photon Reabsorption in Quantum Dot-Polymer Composites for Use as Displacement Sensors </span> <br>
+        <span class="authors"> MA Koc, SN Raja, LA Hanson, SC Nguyen, NJ Borys, AS Powers, S Wu, ... <br>
+        <b> ACS nano </b> 11 (2), 2075-2084, 2017 </span> <a href="javascript:void(0)" onclick="showabstract(this, 6)">Show Abstract</a> <br>
+
+          <span class="abstract" id="abstract6" style="display: none"> 
+          <br>
+          The reabsorption of photoluminescence within a medium, an effect known as the inner filter effect (IFE), has been well studied in solutions, but has garnered less attention in regards to solid-state nanocomposites. Photoluminescence from a quantum dot (QD) can selectively excite larger QDs around it resulting in a net red-shift in the reemitted photon. In CdSe/CdS core/shell QD-polymer nanocomposites, we observe a large spectral red-shift of over a third of the line width of the photoluminescence of the nanocomposites over a distance of 100 μm resulting from the IFE. Unlike fluorescent dyes, which do not show a large IFE red-shift, QDs have a component of inhomogeneous broadening that originates from their size distribution and quantum confinement. By controlling the photoluminescence broadening as well as the sample dispersion and concentration, we show that the magnitude of the IFE within the nanocomposite can be tuned. We further demonstrate that this shift can be exploited in order to spectroscopically monitor the vertical displacement of a nanocomposite in a fluorescence microscope. Large energetic shifts in the measured emission with displacement can be maximized, resulting in a displacement sensor with submicrometer resolution. We further show that the composite can be easily attached to biological samples and is able to measure deformations with high temporal and spatial precision.
+        </span>
+      </li>
+      <li>
+        <span class="pubtitle"> Liquid Cell TEM Study of Nanoparticle Diffusion and Interaction in Liquids </span> <br>
+        <span class="authors"> AS Powers, HG Liao, H Zheng <br>
+        <b> Proceedings of Microscopy and Microanalysis </b> 22 (S3), 742-743 </span>
+      </li>
+      </ol>
     </p>
   </div>
 

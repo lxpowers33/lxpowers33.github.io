@@ -27,11 +27,12 @@ body {
   transition-timing-function: ease;
 }
 
-/* Change the link color on hover */
+/* Change the link color on hover except for logo*/
 .nav a:hover:not(#logo) {
     background-color: hsl(210, 10%, 21%);
 }
 
+/* Logo positioned on left hand side */
 #logo {
   font-family: "Amatic SC", "Open Sans", sans-serif;
   font-size: 20pt;
@@ -45,7 +46,8 @@ body {
     display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 600 pixels wide, hide all links. 
+Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .nav a {
     display: none;

@@ -4,23 +4,23 @@
     color: #3b3c40;
     font-size: 14px;*/
     padding: 5.55555555% 11.1111111%;
-    color: #3b3b3b;
-    line-height: 1.55;
-    
 }
 
-.maintext {
+p.maintext {
 	font-family: "Georgia",serif;
-	font-size: 1.15em;
+    font-size: 1.15em;
+    line-height: 1.5em;
+    color: #3b3b3b;
 }
 
-.maintitle {
+h1.maintext {
 	font-family: "Raleway", sans-serif;
-	font-size: 1.5em;
-	font-weight: 300;
-	margin-bottom: 0em;
-	margin-top: 0em;
-	
+	color: #3b3b3b;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 1.0em;
+    line-height: 1.55;
+    margin-top: 0em;
 }
 
 #scroll {
