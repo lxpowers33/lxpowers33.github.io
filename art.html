@@ -53,7 +53,7 @@
 
 </head>
 
-<body onload="">
+<body onload="initPollock()">
 
   <!-- NAVBAR -->
   <div class="nav" id="navbar">
@@ -86,12 +86,7 @@
 
   <!-- Scripts controlling the banner -->
   <script>
-
-    jQuery(document).ready(function() {
-      //initialize the animation on document ready
-      initPollock();
-    });
-
+  
     $("#pollockbanner").mousemove(function( event ) {
       /*register mouse moves over the canvas container and call 
       newpoint method to draw each subsequent point */
