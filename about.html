@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Alex</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style_header.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fliptext.css">
+
+  <style> 
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+	   background-color: #151515;
+	}
+
+	.container {
+    display: flex;
+		padding-left: 20%;
+    padding-top: 10%;
+    position: relative;
+    z-index: 1;
+	}
+
+  #left {
+    flex: none;
+  }
+
+  #right {
+    flex: none;
+  }
+
+  /*.textshadow {
+    background-color: black;
+    box-shadow: 0px 0px 7px black, 0px 0px 7px black;
+  }*/
+
+	.Hello {
+		font-family: "Raleway", sans-serif;
+		color: white;
+  	font-size: 1.5em;
+  	font-weight: 300;
+  	line-height: 1.55em;
+  	text-align: right;
+    text-shadow: 4px 0px 5px black, -4px 0px 5px black, 0px 4px 5px black, 0px -4px 5px black, 0px 0px 40px black, 0px 0px 40px black, 0px 0px 40px black;
+	}
+
+	#Name {
+		font-family: "Raleway", sans-serif;
+		color: white;
+  	font-size: 5em;
+  	font-weight: 600;
+  	text-align: right;
+  	text-shadow: 7px 0px 10px black, -7px 0px 10px black, 0px 7px 10px black, 0px -7px 10px black, 0px 0px 40px black, 0px 0px 40px black, 0px 0px 40px black;
+	}
+
+	#Iam {
+		font-family: "Raleway", sans-serif;
+    color: #aebcb9;
+    font-size: 2.5em;
+    line-height: 1.55em;
+    font-weight: 300;
+    text-align: right;
+    text-shadow: 4px 0px 5px black, -4px 0px 5px black, 0px 4px 5px black, 0px -4px 5px black, 0px 0px 40px black, 0px 0px 40px black, 0px 0px 40px black;
+	}
+
+  /*IMAGE SLIDER STYLES*/
+  #slide_container {
+    width:300px;
+    height:300px;
+    overflow:hidden; /* So the sliding bit doesn't stick out. */
+    margin:0 auto;
+    box-shadow: 0px 0px 10px 10px #151515;
+  }
+
+  #slide_images {
+    /* This is the bit that moves. It has 4 images, so 4 * 450 = 1800. You could use javascript
+    to work this out instead by counting images. */
+    width:900px;
+
+    -webkit-transition:all 1.0s ease-in-out;
+    -moz-transition:all 1.0s ease-in-out;
+    -o-transition:all 1.0s ease-in-out;
+    transition:all 1.0s ease-in-out;
+  }
+
+  #slide_images img {
+    padding:0;
+    margin:0;
+  }
+
+  </style>
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY <script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+  <script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script> 
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/render3.js"></script>
+  <script language="javascript" src="JS/render4.js"></script>
+  <script language="javascript" src="JS/render5.js"></script>
+  <script language="javascript" src="JS/fliptext.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Alex Powers </a>
+      <a href="resources.html">About</a>
+      <a href="art.html">Art</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; height: 100%;">
+      <canvas id="mycanvas"> </canvas>
+      <div class="container" id="titlecontainer">
+        <div id = "left" style=" margin-right:30px;">
+        	<div class="Hello"> <span class="textshadow"> Hello, </span> </div>
+        	<div id="Name"> I'm Alex </div>
+          <!--Animated Headline using fliptext.css and fliptext.js -->
+        	<div id="Iam"> 
+            <span class="cd-headline rotate-1">
+              <span class="textshadow"> I am</span>
+              <span class="cd-words-wrapper"> 
+                <b class="is-visible">a Scientist</b>
+                <b>an Artist</b>
+                <b>an Explorer</b> 
+              </span> 
+            </span>
+          </div> 
+        </div>       
+        <div id = "right" >
+          <!--Animated Picture Carousel -->
+          <div id="slide_container">
+            <div id="slide_images">
+              <img src="Images/About/image11crop.jpeg" height="300px" style=" position: relative;z-index: 1; display: block;"></img>
+              <img src="Images/About/IMG_4584copy.PNG" height="300px" style=" position: relative;z-index: 1; display: block;"></img>
+              <img src="Images/About/IMG_5915.jpeg" height="300px" style=" position: relative;z-index: 1; display: block;"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body> 
+</html>

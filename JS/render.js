@@ -1,4 +1,4 @@
-
+ 
 var canvas;
 var ctx;
 var _counter = 0;
@@ -7,7 +7,7 @@ var _rotationy = 0;
 var _speed = 0.08;
 var _scale = 0.5;
 var _planets = new Array();
-
+var mycolor = "#8c8c8c";
 
 function init() {
 
@@ -32,6 +32,8 @@ function init() {
 function reSize() {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+	canvas.style.width="100%";
+	canvas.style.height="100%";
 	canvas.style.position = 'absolute';
 	canvas.style.left="0px";
 	canvas.style.top="0px";
@@ -45,7 +47,7 @@ _planets.push({
 	parent:null,
 	scale:1,
 	radius:70,
-	color:"#881024",
+	color:mycolor,
 	rotationx:0,
 	rotationy:0,
 	id:_counter++});
@@ -53,20 +55,20 @@ _planets.push({
 
 	_planets.push({
 		type:"small planet", x:0, y:0, z:0, parent:_planets[0], scale:1, rotationx:Math.PI*2*Math.random(),rotationy:0,
-		color:"#199FAF",distance:200, radius:20, speedx:0.25,
+		color:mycolor,distance:200, radius:20, speedx:0.25,
 		speedy: 0,
 		id:_counter++});
 
 
 	_planets.push({
 		type:"small planet", x:0, y:0, z:0, parent:_planets[0], scale:1, rotationx:Math.PI*2*Math.random(),rotationy:0,
-		color:"#880D85",distance:400, radius:40, speedx:0.15,
+		color:mycolor,distance:400, radius:40, speedx:0.15,
 		speedy: 0,
 		id:_counter++});
 
 	_planets.push({
 		type:"small planet", x:0, y:0, z:0, parent:_planets[2], scale:1, rotationx:Math.PI*2*Math.random(),rotationy:0,
-		color:"#ffffff",distance:30, radius:10, speedx:0.5,
+		color:mycolor,distance:30, radius:10, speedx:0.5,
 		speedy: 0,
 		id:_counter++});
 
@@ -80,7 +82,7 @@ for(i=0; i<30; i++) {
 		parent:_planets[0],
 		scale:1,
 		radius:0.2+(1-rnd)*7,
-		color:"#ffffff",
+		color:mycolor,
 		distance:40,
 		rotationx:Math.PI*2*Math.random(),
 		rotationy:Math.random()*0.4,
@@ -90,7 +92,7 @@ for(i=0; i<30; i++) {
 }
 
 
-for(i=0; i<300; i++) {
+for(i=0; i<500; i++) {
 	var rnd = Math.random();
 	_planets.push({
 		type:"small planet",
@@ -100,7 +102,7 @@ for(i=0; i<300; i++) {
 		parent:_planets[0],
 		scale:1,
 		radius:0.5+(1-rnd)*1.5,
-		color:"#ffffff",
+		color:mycolor,
 		distance:40+800*rnd,
 		rotationx:Math.PI*2*Math.random(),
 		rotationy:Math.random()*0.4,
@@ -176,8 +178,8 @@ function getMouseXY(e) {
 	if (tempX < 0){tempX = 0;}
 	if (tempY < 0){tempY = 0;}  
 
-	mouseX = tempX;
-	mouseY = tempY;
+	//mouseX = tempX;
+	//mouseY = tempY;
 
 }
 

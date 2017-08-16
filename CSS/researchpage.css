@@ -1,120 +1,128 @@
 
-    .imagelink {
-        text-decoration: none;
-        position: relative;
+ /*Flex Box Layout styles*/
+.row{
+    display: flex;
+    margin-bottom: 50px;
+}   
 
-    }
+.col{
+    flex: none;
+    box-sizing: border-box;
+    width: 300px;
+    height: auto;
+    max-height: 2000px;
+}
 
-    .row{
-        display: flex;
-        margin-bottom: 50px;
-    }   
+.elastic{
+    flex: auto;
+    width: 100%;
+    margin-left: 20px;    
+}
 
-    .col{
-        flex: none;
-        box-sizing: border-box;
-        width: 300px;
-        height: auto;
-        max-height: 2000px;
-    }
+/*Project Images*/
+.imagelink {
+    text-decoration: none;
+    position: relative;
+}
 
-    .elastic{
-        flex: auto;
-        width: 100%;
-        margin-left: 20px;    
-    }
+.imagecontainer {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+}
 
+.backimage {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
 
-    #fade-in2, #fade-in3, #fade-in4 {
-        position: relative;
-        height: 0px;
-        overflow: hidden;
-        opacity: 0;
-
-    }
-
-    #fade-in1 {
-        overflow: hidden;
-        position: relative;
-        top: -40px;
-        transform: translateY(40px); 
-
-    }
-
-    #fade-in1.show, #fade-in2.show, #fade-in3.show, #fade-in4.show {
-
-    }
-
-    .backimage {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .imagecontainer {
-        height: 200px;
-        width: 300px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    span.text-content {
-      background: rgba(0,0,0,0.6);
-      cursor: pointer;
-      display: block;
-      height: 200px;
-      width: 300px;
-      padding: 25px 25px;
-      left: 0;
-      position: absolute;
-      top: 0; 
-      z-index: 2;
-
-        font-family: "Raleway", sans-serif;
-        font-size: 2.0em;
-        font-weight: 300;
-        color: rgba(210, 210, 210, 1);
-
-      -webkit-transition: all 200ms ease-in-out;
-      -moz-transition: all 200ms ease-in-out;
-      -o-transition: all 200ms ease-in-out;
-      transition: all 200ms ease-in-out;
-    }
-
-    .imagecontainer:hover span.text-content {
-        background: rgba(0,0,0,0.35);
-        color: rgba(250, 250, 250, 1);
-    }
-
-    span.text-content.highlight, .imagecontainer:hover span.text-content.highlight{
-        background: rgba(0,0,0,0);
-        color: rgba(255, 255, 255, 1);
-    }
+/*Project Descriptions*/
 
 
-    span.text-content span {
-      display: table-cell;
-      /*text-align: center;
-      vertical-align: middle;*/
-    }
+#fade-in2, #fade-in3, #fade-in4 {
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
 
-    span.pubtitle {
-        font-family: "Georgia",serif;
-        font-size: 1.15em;
-        line-height: 1.5em;
-        color: #3b3b3b;
-    }
+}
 
-    span.authors {
-        font-family: "Georgia",serif;
-        font-size: 1.0em;
-        line-height: 1.5em;
-        color: #A9A9A9;
-    }
+#fade-in1 {
+    overflow: hidden;
+    position: relative;
+    top: -40px;
+    transform: translateY(40px); 
 
-    .publist li {
-        font-family: "Georgia",serif;
-        font-size: 1.0em;
-        line-height: 1.5em;
-        margin-bottom: 20px;
-    }
+}
+
+#fade-in1.show, #fade-in2.show, #fade-in3.show, #fade-in4.show {
+
+}
+
+
+
+
+
+span.text-content {
+  background: rgba(0,0,0,0.6);
+  cursor: pointer;
+  display: block;
+  height: 200px;
+  width: 300px;
+  padding: 25px 25px;
+  left: 0;
+  position: absolute;
+  top: 0; 
+  z-index: 2;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 2.0em;
+    font-weight: 300;
+    color: rgba(210, 210, 210, 1);
+
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.imagecontainer:hover span.text-content {
+    background: rgba(0,0,0,0.35);
+    color: rgba(250, 250, 250, 1);
+}
+
+span.text-content.highlight, .imagecontainer:hover span.text-content.highlight{
+    background: rgba(0,0,0,0);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+span.text-content span {
+  display: table-cell;
+  /*text-align: center;
+  vertical-align: middle;*/
+}
+
+/*publication list styles */
+span.pubtitle {
+    font-family: "Georgia",serif;
+    font-size: 1.15em;
+    line-height: 1.5em;
+    color: #3b3b3b;
+}
+
+span.authors {
+    font-family: "Georgia",serif;
+    font-size: 1.0em;
+    line-height: 1.5em;
+    color: #A9A9A9;
+}
+
+.publist li {
+    font-family: "Georgia",serif;
+    font-size: 1.0em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}

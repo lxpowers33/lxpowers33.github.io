@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>Alex's Art</title>
+  <!-- Art Page containing visual arts, graphic design, 
+  and photography with interactive banner -->
 
+  <!-- For Mobile Devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- CSS -->
@@ -23,7 +26,6 @@
   <script type="text/javascript" src="JS/rune.js"></script>
   <script type="text/javascript" src="JS/pollock.js"></script>
 
-  
   <!-- UNITE GALLERY -->
   <script type='text/javascript' src='unitegallery/js/ug-common-libraries.js'></script> 
   <script type='text/javascript' src='unitegallery/js/ug-functions.js'></script>
@@ -46,27 +48,26 @@
   <script type='text/javascript' src='unitegallery/js/ug-lightbox.js'></script>
   <script type='text/javascript' src='unitegallery/js/ug-carousel.js'></script>
   <script type='text/javascript' src='unitegallery/js/ug-api.js'></script>
-
-  <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
-  
+  <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css'>
   <script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
 
 </head>
 
-<body onload="initPollock()">
+<body onload="">
 
   <!-- NAVBAR -->
-    <div class="nav" id="navbar">
-      <a href="javascript:void(0);" id="logo"> Alex Powers </a>
-      <a href="art.html">Art</a>
-      <a href="research.html">Research</a>
-      <a href="about.html">About</a>
-      <a href="planets.html">Home</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+  <div class="nav" id="navbar">
+    <a href="javascript:void(0);" id="logo"> Alex Powers </a>
+    <a href="resources.html">About</a>
+    <a href="art.html">Art</a>
+    <a href="research.html">Research</a>
+    <a href="about.html">Home</a>
+    <a href="javascript:void(0);" class="icon" onclick="navbarfunction()">&#9776;</a>
+  </div>
 
-    <script type="text/javascript">
-    function myFunction() {
+  <!-- NAVBAR button for when in Mobile mode -->
+  <script type="text/javascript">
+    function navbarfunction() {
       var x = document.getElementById("navbar");
       if (x.className === "nav") {
         x.className += " responsive";
@@ -74,7 +75,7 @@
         x.className = "nav";
       }
     }
-    </script>
+  </script>
 
   <!-- BANNER -->
   <div class="banner" id="pollockbanner">
@@ -83,13 +84,22 @@
     <div id="title">Art | Design</div>
   </div>
 
-  <!-- Activate the Banner Animation -->
+  <!-- Scripts controlling the banner -->
   <script>
-  $("#pollockbanner").mousemove(function( event ) {
-    var offset = $("#pollockbanner").offset();
-    var mouse = {x:event.pageX, y:event.pageY-offset.top};
-    newpoint(mouse);
-  });
+
+    jQuery(document).ready(function() {
+      //initialize the animation on document ready
+      initPollock();
+    });
+
+    $("#pollockbanner").mousemove(function( event ) {
+      /*register mouse moves over the canvas container and call 
+      newpoint method to draw each subsequent point */
+      var offset = $("#pollockbanner").offset();
+      var mouse = {x:event.pageX, y:event.pageY-offset.top};
+      newpoint(mouse);
+    });
+
   </script>
 
   <!-- BODY -->
@@ -99,13 +109,12 @@
     <h1 class="maintext"> Fine Arts </h1>
     <p class="maintext"> 
     I do artwork for a variety of reasons: to capture an observation, to communicate an idea, but most often because I just want to create something. <br>
-    My favorite media include white charcoal, ball point pen, colored pencil, and oil paint. My artwork often focuses on surreal themes but is rendered in a realistic, detail-oriented style. I have always been interested in how light interacts with the world through shadows, reflections, and transparent materials, and the techniques artists use to replicate these observations on 2D media. My interest in biological illustration further enhanced my attention to detail and textures. Other favorite subjects include biblical imagery, rainy days, and cats. 
-
+    My favorite media include white charcoal, ball point pen, colored pencil, and oil paint. My artwork often focuses on surreal themes but is rendered in a realistic, detail-oriented style. I have always been interested in how light interacts with the world through shadows, reflections, and transparent materials, and the techniques artists use to replicate these observations on 2D media. My interest in biological illustration further enhanced my attention to detail and textures. Other favorite subjects include biblical imagery, rainy days, and cats.
     </p>
   </div>
 
   <!-- UNITE Photo Gallery for Art -->
-  <div id="gallery" style="display:none;">
+  <div id="galleryart" style="display:none;">
     <img alt="Amber, colored pencil on paper"
        src="Images/Art/Thumbs/image1.jpeg"
        data-image="Images/Art/image1.jpg"
@@ -318,8 +327,7 @@
   <!-- ACTIVATE GALLERIES and Gallery Options -->
   <script type="text/javascript">
     jQuery(document).ready(function(){
-
-      jQuery("#gallery").unitegallery({
+      jQuery("#galleryart").unitegallery({
         tile_enable_shadow:false,
         tile_enable_border:false,
         tiles_space_between_cols:10,
@@ -337,9 +345,7 @@
         tile_border_color: "#000000",
         tile_enable_outline:false,
       });
-
     });
-    
   </script>
 
 </body> 

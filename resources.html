@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About me</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style_header.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style_banner.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style_body.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY <script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+  <script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script> 
+
+  <!-- SCRIPTS and LIBRARIES -->
+
+  <!-- Styles --> 
+  <style> 
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+     background-color: #151515;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Alex Powers </a>
+      <a href="resources.html">About</a>
+      <a href="art.html">Art</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("navbar");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
+
+    <div class="mainbody">
+
+    <h1 class="maintext"> 
+    <a href="resumecollege2.pdf" style="font-size: 0.8em; color: white;"> My resume </a><br>
+    </h1>
+
+    <h1 class="maintext" style="color: white; font-size: 1em;"> 
+    <span style="text-decoration: underline;"> 20 Favorite Books and Stories </span> <br>
+    Lord of the Rings, J.R. Tolkein <br>
+    A Tale of Two Cities, Charles Dickens <br>
+    Harry Potter, J.K. Rowling <br>
+    The Once and Future King, T.H. White <br>
+    The Time Machine, H.G. Wells <br>
+    Jane Eyre, Charlotte Brontë <br>
+    Midnight in the Garden of Good and Evil, John Berendt <br> 
+    Unbroken, Laura Hillenbrand <br>
+    The Historian, Elizabeth Kostova <br>
+    Girl with a Dragon Tattoo, Stieg Larsson <br>
+    East of Eden, John Steinbeck <br>
+    The Scarlet Letter, Nathaneil Hawthorne <br>
+    A Good Man Is Hard to Find and Other Stories, Flannery O'Connor <br>
+    The Color Purple, Alice Walker <br>
+    The Count of Monte Cristo, Alexandre Dumas <br>
+    The Complete Sherlock Holmes, Arthur Conan Doyle <br>
+    Dune, Frank Herbert <br>
+    Great Expectations, Charles Dickens <br>
+    Three Muskateers, Alexandre Dumas <br>
+    </h1>
+
+  </div>
+</body>

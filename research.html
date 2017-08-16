@@ -2,7 +2,11 @@
 <html>
 <head>
   <title>Alex's Research</title>
+  <!-- Research Page containing list of publications and research project descriptions -->
 
+  <!-- For Mobile Devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="CSS/style_header.css">
   <link rel="stylesheet" type="text/css" href="CSS/style_banner.css">
@@ -25,20 +29,21 @@
 
 </head>
 
-<body onload="initDynamicPoints()">
+<body>
 
   <!-- NAVBAR -->
-    <div class="nav" id="navbar">
-      <a href="javascript:void(0);" id="logo"> Alex Powers </a>
-      <a href="art.html">Art</a>
-      <a href="research.html">Research</a>
-      <a href="about.html">About</a>
-      <a href="planets.html">Home</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+  <div class="nav" id="navbar">
+    <a href="javascript:void(0);" id="logo"> Alex Powers </a>
+    <a href="resources.html">About</a>
+    <a href="art.html">Art</a>
+    <a href="research.html">Research</a>
+    <a href="about.html">Home</a>
+    <a href="javascript:void(0);" class="icon" onclick="navbarfunction()">&#9776;</a>
+  </div>
 
-    <script type="text/javascript">
-    function myFunction() {
+  <!-- NAVBAR button for when in Mobile mode -->
+  <script type="text/javascript">
+    function navbarfunction() {
       var x = document.getElementById("navbar");
       if (x.className === "nav") {
         x.className += " responsive";
@@ -46,7 +51,7 @@
         x.className = "nav";
       }
     }
-    </script>
+  </script>
 
   <!-- BANNER -->
   <div class="banner">
@@ -54,15 +59,19 @@
     <div id="title">Research</div>
   </div>
 
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      //initialize the animation on document ready
+      initDynamicPoints();
+    })
+  </script>
+
   <!-- BODY -->
   <div class="mainbody">
     <h1 class="maintext">  Research </h1>
     <p class="maintext"> 
     I am interested in the intersection of chemistry, biology, and computer science. My first research focus was the synthesis of semiconductor nanoparticles, working at UC Berkeley. Since then, my research has shifted to studying dynamic nanoscale systems in general and developing tools to do so from computer science and chemistry. These topics includes nanoscale self-assembly, single molecule imaging, and liquid electron microscopy. Along with these, I have become very interested in image analysis and computer vision. In the future, I am interested in translating my knowledge and skills into medical and clinical applications working at Stanford University.
-    <br>
-    <hr>
-    <br>
-    <br>
+    <br> <br> <br> <br>
     </p>
 
     <h1 class="maintext">  Projects </h1>

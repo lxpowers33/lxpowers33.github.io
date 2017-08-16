@@ -1,8 +1,4 @@
 .mainbody {
-	/*font-family: "Open Sans",arial,sans-serif;
-    line-height: 21px;
-    color: #3b3c40;
-    font-size: 14px;*/
     padding: 5.55555555% 11.1111111%;
 }
 
@@ -23,6 +19,7 @@ h1.maintext {
     margin-top: 0em;
 }
 
+/*for horizontal scrollable image gallery*/
 #scroll {
 height:505px;
 margin:0px 0px;
