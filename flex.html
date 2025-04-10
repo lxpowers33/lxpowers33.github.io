@@ -22,9 +22,18 @@
             align-items: center;
         }
 
+        body {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
         h1 {
             font-weight: 500;
-            font-size: 3em;
+            font-size: 2em;
             margin-bottom: 20px;
             font-family: 'Montserrat', sans-serif;
         }
@@ -37,6 +46,9 @@
             display: inline-block; /* To avoid stretching the background */
             box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4); /* Subtle shadow */
         }
+        .place_holder {
+            height: 200px;
+        }
 
         p {
             font-weight: 300;
@@ -46,6 +58,17 @@
             max-width: 700px;
             line-height: 1.6;
             font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            font-weight: 300;
+            font-size: 1.1em;
+            font-family: 'Arial', sans-serif;
+            width: 80%;
+            max-width: 700px;
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            color: rgb(237, 185, 87);
         }
     </style>
 </head>
@@ -63,7 +86,12 @@
     <p> 
         At Flex, we leverage <strong>advanced computational models</strong> to explore these dynamic protein states and uncover hidden conformations and pockets. 
         By designing drugs that precisely target these ever-changing structures, we can achieve a higher level of specificity and selectivity. 
-        This results in medications that are not only more effective but also have<strong>fewer side effects</strong> ; enhancing clinical trial success rates and improving patient outcomes.
+        This results in medications that are not only more effective but also have <strong>fewer side effects</strong>, enhancing clinical trial success rates and improving patient outcomes.
     </p>
+    <footer>
+        <a href="https://www.linkedin.com/in/alex-powers-02297492" target="_blank">Contact Us on Linkedin</a>
+    </footer>
+    <div class="place_holder"></div>
+
 </body>
 </html>
